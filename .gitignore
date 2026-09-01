@@ -1,0 +1,57 @@
+# ─── Confidential plant data — NEVER commit ────────────────────────────
+data/
+*.csv
+*.xlsx
+*.bin
+*.key
+!example_data_template.csv
+
+# Notebooks store their outputs inside the file (plots + printed rows of
+# real data). Strip them first if you ever want to commit one:
+#   jupyter nbconvert --clear-output --inplace notebook.ipynb
+*.ipynb
+.ipynb_checkpoints/
+
+# Papers, letters, internal docs
+*.docx
+Litterature/
+BioB/
+Frais/
+analysis_summary.txt
+causal_analysis_report.md
+
+# Generated figures and result files
+*.png
+
+# Vendored upstream repos — clone them yourself, see README
+IDTxl/
+TCDF/
+tigramite/
+CausalT/
+FPCMCI/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+lightning_logs/
+
+.claude/
+
+# Journal submission tooling — embeds the manuscript ID, verbatim reviewer
+# comments and author responses for a paper under double-blind review.
+# Kept on disk, out of the repo. Remove these lines once the paper is public.
+apply_revisions.py
+build_response_letter.py
+build_response_letter_r2.py
+fix_content.py
+fix_content2.py
+fix_content3.py
+fix_content4.py
+fix_revisions.py
+make_tracked_v3.py
+
+# Verbatim copy of tigramite's CMIknn (GPL-3.0, Jakob Runge).
+# The tigramite package already provides it; shipping the copy would make
+# this whole repo GPL.
+cmiknn.py

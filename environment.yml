@@ -1,0 +1,26 @@
+name: causal-t3
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - ipykernel
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - matplotlib
+  - seaborn
+  - xgboost
+  - openpyxl
+  - pip:
+      - tigramite
+      - neuralprophet
+      - dash
+      - plotly
+      - cryptography
+      # Optional, see README section 1:
+      #   - fpcmci        # needed by F-PCMCI.py
+      #   - torch         # needed by the TCDF step of algo-comparison.py
